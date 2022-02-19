@@ -60,14 +60,16 @@
                 age: age.value,
                 password: password.value,
             };
-        });
-        fetch("http://127.0.0.1:1337/register", {
+
+            fetch("http://127.0.0.1:1337/register", {
             method: "POST",
             body: JSON.stringify(payload),
             headers: {
                 "Content-Type": "application/json",
             },
         });
+        });
+        
     </script>
 </body>
 

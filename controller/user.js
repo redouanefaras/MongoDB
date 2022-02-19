@@ -1,12 +1,12 @@
 import User from "../model/user.js";
+import bcrypt from "bcryptjs";
 
 export const creatUser = (req, res, next)=>{
-    const userInfo={
-name :"redouane",
-email:"redouanefaras@gmail.com",
-password:"1234",
-    };
+    const userInfo=req.body;
 
+bcrypt.hash(userInfo.password)
+.then()
+.catch();
     const user = new User(userInfo);
 
     user.save()
